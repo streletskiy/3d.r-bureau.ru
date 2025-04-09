@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Дуга L — 3D/AR</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Дуга L — 3D/AR">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="../assets/css/styles.css" rel="stylesheet"/>
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="./duga-l.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="./poster.webp" shadow-intensity="0.5" exposure="1" shadow-softness="1.25" tone-mapping="neutral" environment-image="legacy" camera-target="0 0.375m 0m" camera-orbit="-395deg 65deg 2.75m" field-of-view="27.5deg">
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          Смотреть в AR
+      </button>
+      <div id="ar-prompt">
+          <img src="./ar_hand_prompt.png">
+      </div>
+	<div class="container">
+		<div class="controls" id="color-controls" data-color="#4d5741">
+			<button data-color="#4d5741" alt="Оливково-зеленый"><div class="mark" style="background-color: #4d5741;" data-color="#4d5741"></div></button>
+			<button data-color="#798079" alt="Агатовый серый"><div class="mark" style="background-color: #798079;" data-color="#798079"></div></button>
+			<button data-color="#b3b3b3" alt="Белый"><div class="mark" style="background-color: #b3b3b3;" data-color="#b3b3b3"></div></button>
+			<button data-color="#212122" alt="Глубокий черный"><div class="mark" style="background-color: #212122;" data-color="#212122"></div></button>
+			<button data-color="#925d4b" alt="Бежево-красный"><div class="mark" style="background-color: #925d4b;" data-color="#925d4b"></div></button>
+			<button data-color="#662625" alt="Коричнево-красный"><div class="mark" style="background-color: #662625;" data-color="#662625"></div></button>
+			<button data-color="#5b7048" alt="Зеленый"><div class="mark" style="background-color: #5b7048;" data-color="#5b7048"></div></button>
+		</div>
+	</div>
+    </model-viewer>  
+    <script src="./script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+	<div class="annotation">Дополненная реальность работает только на смартфоне</div>
+  </body>
+</html>
