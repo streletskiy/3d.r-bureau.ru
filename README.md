@@ -14,8 +14,8 @@
 | [Дуга L](https://r-bureau.ru/stul-ulichnyy-barnyy-duga-l) | ![](duga-l/preview.jpg) | [Скачать](duga-l/rb_chair_duga_L.zip) | [Смотреть](duga-l/) |
 | [Элемент](https://r-bureau.ru/stul-ulichnyy-element) | ![](element/preview.jpg) | [Скачать](element/rb_chair_element.zip) | [Смотреть](element/) |
 | [Элемент с подлокотниками](https://r-bureau.ru/stul-ulichnyy-s-podlokotnikami-element) | ![](element-arm/preview.jpg) | [Скачать](element-arm/rb_chair_element_arm.zip) | [Смотреть](element-arm/) |
-| [Элемент барный](https://r-bureau.ru/stul-barniy-element) | ![](element-bar/preview.jpg) | [Скачать](element-bar/rb_chair_element_bar.zip) | ❌ |
-| [Элемент с подлокотниками барный](https://r-bureau.ru/stul-barniy-s-podlokotnikami-element) | ![](element-bar-arm/preview.jpg) | [Скачать](element-bar-arm/rb_chair_element_bar_arm.zip) | ❌ |
+| [Элемент барный](https://r-bureau.ru/stul-barniy-element) | ![](element-bar/preview.jpg) | [Скачать](element-bar/rb_chair_element_bar.zip) | [Смотреть](element-bar/) |
+| [Элемент с подлокотниками барный](https://r-bureau.ru/stul-barniy-s-podlokotnikami-element) | ![](element-bar-arm/preview.jpg) | [Скачать](element-bar-arm/rb_chair_element_bar_arm.zip) | [Смотреть](element-bar-arm/) |
 | [Стол "6"](https://r-bureau.ru/stol-6-stoleshnitsa-600-mm) | ![](table-6-600/preview.jpg) | [Скачать](table-11-600/rb_tables_6-11.zip) | [Смотреть](table-6-600/) |
 | [Стол "11"](https://r-bureau.ru/stol-11-stoleshnitsa-600-mm) | ![](table-11-600/preview.jpg) | [Скачать](table-11-600/rb_tables_6-11.zip) | [Смотреть](table-11-600/) |
 | [Журнальный столик](https://r-bureau.ru/stol-zhurnalnyy) | ![](table-coffee/preview.jpg) | [Скачать](table-coffee/rb_table_coffee.zip) | [Смотреть](table-coffee/) |
