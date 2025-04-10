@@ -19,8 +19,8 @@
 | [Стол "6"](https://r-bureau.ru/stol-6-stoleshnitsa-600-mm) | ![](table-6-600/preview.jpg) | [Скачать](table-11-600/rb_tables_6-11.zip) | [Смотреть](table-6-600/) |
 | [Стол "11"](https://r-bureau.ru/stol-11-stoleshnitsa-600-mm) | ![](table-11-600/preview.jpg) | [Скачать](table-11-600/rb_tables_6-11.zip) | [Смотреть](table-11-600/) |
 | [Журнальный столик](https://r-bureau.ru/stol-zhurnalnyy) | ![](table-coffee/preview.jpg) | [Скачать](table-coffee/rb_table_coffee.zip) | [Смотреть](table-coffee/) |
-| [Кофейный столик квадратный](https://r-bureau.ru/stol-kofeynyy-kvadratnyy) | ❌ | ❌ | ❌ |
-| [Кофейный столик прямоугольный](https://r-bureau.ru/stol-kofeynyy	) | ❌ | ❌ | ❌ |
+| [Кофейный столик прямоугольный](https://r-bureau.ru/stol-kofeynyy	) | ![](table-coffee-rectangle/preview.jpg) | [Скачать](table-coffee-rectangle/rb_coffeetable_solid_rectangle.zip) | [Смотреть](table-coffee-rectangle/) |
+| [Кофейный столик квадратный](https://r-bureau.ru/stol-kofeynyy-kvadratnyy) | ![](table-coffee-square/preview.jpg) | [Скачать](table-coffee-square/rb_coffeetable_solid_square.zip) | [Смотреть](table-coffee-square/) |
 | [Круглый столик подвесной](https://r-bureau.ru/stol-podvesnoy-kruglyy) | ❌ | ❌ | ❌ |
 | [Прямоугольный столик подвесной](https://r-bureau.ru/stol-podvesnoy-kvadratnyy) | ❌ | ❌ | ❌ |
 | [Стол на трёх ножках](https://r-bureau.ru/stol-na-trekh-nozhkakh) | ![](table-tripod/preview.jpg) | [Скачать](table-tripod/rb_table_tripod.zip) | [Смотреть](table-tripod/) |
