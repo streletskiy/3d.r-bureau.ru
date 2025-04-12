@@ -1,99 +1,40 @@
 <!doctype html>
 <html lang="ru">
-<head>
-	<title>Круглый столик подвесной — 3D/AR</title>
-	<meta charset="utf-8">
-	<meta name="description" content="Журнальный столик — 3D/AR">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link type="text/css" href="../assets/css/styles.css" rel="stylesheet"/>
+  <head>
+    <title>Круглый столик подвесной — 3D/AR</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Журнальный столик — 3D/AR">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="../assets/css/styles.css" rel="stylesheet"/>
 	<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
-	<style>
-		.controls button.active .mark {
-			outline: 3px solid #fff;
-			box-shadow: 0 0 0 2px #000;
-			border-radius: 50%;
-		}
-	</style>
-</head>
-<body>
-	<model-viewer 
-		src="./coffeetable_susp_circle.glb" 
-		ar 
-		ar-modes="webxr scene-viewer quick-look" 
-		camera-controls 
-		poster="./poster.webp" 
-		shadow-intensity="0.5" 
-		exposure="1" 
-		shadow-softness="1" 
-		tone-mapping="neutral" 
-		environment-image="legacy" 
-		camera-target="0.0m 0.550m -0.0m" 
-		camera-orbit="-50deg 70deg 2.75m" 
-		field-of-view="20deg"
-	>
-		<div class="progress-bar hide" slot="progress-bar">
-			<div class="update-bar"></div>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="./coffeetable_susp_circle.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="./poster.webp" shadow-intensity="0.5" exposure="1" shadow-softness="1" tone-mapping="neutral" environment-image="legacy" camera-target="0.0m 0.550m -0.0m" camera-orbit="-50deg 70deg 2.75m" field-of-view="20deg">
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          Смотреть в AR
+      </button>
+      <div id="ar-prompt">
+          <img src="../assets/img/ar_hand_prompt.png">
+      </div>
+	<div class="container">
+		<div class="controls" id="color-controls" data-color="#4d5741">
+			<button data-color="#4d5741" alt="Оливково-зеленый"><div class="mark" style="background-color: #4d5741;" data-color="#4d5741"></div></button>
+			<button data-color="#798079" alt="Агатовый серый"><div class="mark" style="background-color: #798079;" data-color="#798079"></div></button>
+			<button data-color="#b3b3b3" alt="Белый"><div class="mark" style="background-color: #b3b3b3;" data-color="#b3b3b3"></div></button>
+			<button data-color="#212122" alt="Глубокий черный"><div class="mark" style="background-color: #212122;" data-color="#212122"></div></button>
+			<button data-color="#925d4b" alt="Бежево-красный"><div class="mark" style="background-color: #925d4b;" data-color="#925d4b"></div></button>
+			<button data-color="#662625" alt="Коричнево-красный"><div class="mark" style="background-color: #662625;" data-color="#662625"></div></button>
+			<button data-color="#5b7048" alt="Зеленый"><div class="mark" style="background-color: #5b7048;" data-color="#5b7048"></div></button>
 		</div>
-		<button slot="ar-button" id="ar-button">Смотреть в AR</button>
-		<div id="ar-prompt">
-			<img src="../assets/img/ar_hand_prompt.png">
-		</div>
-		<div class="container">
-			<div class="controls" id="color-controls">
-				<button data-color="#4d5741" aria-label="Оливково-зеленый"><div class="mark" style="background-color: #4d5741;"></div></button>
-				<button data-color="#798079" aria-label="Агатовый серый"><div class="mark" style="background-color: #798079;"></div></button>
-				<button data-color="#b3b3b3" aria-label="Белый"><div class="mark" style="background-color: #b3b3b3;"></div></button>
-				<button data-color="#212122" aria-label="Глубокий черный"><div class="mark" style="background-color: #212122;"></div></button>
-				<button data-color="#925d4b" aria-label="Бежево-красный"><div class="mark" style="background-color: #925d4b;"></div></button>
-				<button data-color="#662625" aria-label="Коричнево-красный"><div class="mark" style="background-color: #662625;"></div></button>
-				<button data-color="#5b7048" aria-label="Зеленый"><div class="mark" style="background-color: #5b7048;"></div></button>
-			</div>
-		</div>
-	</model-viewer>  
-
-	<script src="../assets/js/script-progress.js"></script>
-	<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
-
+	</div>
+    </model-viewer>  
+    <script src="../assets/js/script-progress.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 	<div class="annotation">Дополненная реальность работает только на смартфоне</div>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-			const modelViewer = document.querySelector("model-viewer");
-			const colorButtons = document.querySelectorAll("#color-controls button");
-
-			// Изначальный цвет
-			const defaultColor = "#4d5741";
-
-			function setColor(hexColor) {
-				const rgba = hexToRgbaArray(hexColor);
-				const material = modelViewer.model?.materials[0];
-				if (material) {
-					material.pbrMetallicRoughness.setBaseColorFactor(rgba);
-				}
-
-				colorButtons.forEach(btn => {
-					btn.classList.toggle("active", btn.dataset.color.toLowerCase() === hexColor.toLowerCase());
-				});
-			}
-
-			function hexToRgbaArray(hex) {
-				const bigint = parseInt(hex.replace("#", ""), 16);
-				const r = ((bigint >> 16) & 255) / 255;
-				const g = ((bigint >> 8) & 255) / 255;
-				const b = (bigint & 255) / 255;
-				return [r, g, b, 1];
-			}
-
-			colorButtons.forEach(btn => {
-				btn.addEventListener("click", () => {
-					setColor(btn.dataset.color);
-				});
-			});
-
-			modelViewer.addEventListener("load", () => {
-				setColor(defaultColor);
-			});
-		});
-	</script>
-</body>
+  </body>
 </html>
