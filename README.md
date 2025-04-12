@@ -21,8 +21,8 @@
 | [Журнальный столик](https://r-bureau.ru/stol-zhurnalnyy) | ![](table-coffee/preview.jpg) | [Скачать](table-coffee/rb_table_coffee.zip) | [Смотреть](table-coffee/) | [✅](https://3ddd.ru/3dmodels/show/om_zhurnalnyi_stolik) |
 | [Кофейный столик прямоугольный](https://r-bureau.ru/stol-kofeynyy	) | ![](table-coffee-rectangle/preview.jpg) | [Скачать](table-coffee-rectangle/rb_coffeetable_solid_rectangle.zip) | [Смотреть](table-coffee-rectangle/) | ❌ |
 | [Кофейный столик квадратный](https://r-bureau.ru/stol-kofeynyy-kvadratnyy) | ![](table-coffee-square/preview.jpg) | [Скачать](table-coffee-square/rb_coffeetable_solid_square.zip) | [Смотреть](table-coffee-square/) | ❌ |
-| [Круглый столик подвесной](https://r-bureau.ru/stol-podvesnoy-kruglyy) | ❌ | ❌ | ❌ | ❌ |
-| [Прямоугольный столик подвесной](https://r-bureau.ru/stol-podvesnoy-kvadratnyy) | ❌ | ❌ | ❌ | ❌ |
+| [Круглый столик подвесной](https://r-bureau.ru/stol-podvesnoy-kruglyy) | ![](table-coffee-susp-circle/preview.jpg) | [Скачать](table-coffee-susp-circle/rb_coffeetable_susp_circle.zip) | [Смотреть](table-coffee-susp-circle/) | ❌ |
+| [Прямоугольный столик подвесной](https://r-bureau.ru/stol-podvesnoy-kvadratnyy) | ![](table-coffee-susp-rect/preview.jpg) | [Скачать](table-coffee-susp-rect/rb_coffeetable_susp_rect.zip) | [Смотреть](table-coffee-susp-rect/) | ❌ |
 | [Стол на трёх ножках](https://r-bureau.ru/stol-na-trekh-nozhkakh) | ![](table-tripod/preview.jpg) | [Скачать](table-tripod/rb_table_tripod.zip) | [Смотреть](table-tripod/) | [✅](https://3ddd.ru/3dmodels/show/om_stol_na_trekh_nozhkakh) |
 | [Тумбочка](https://r-bureau.ru/tumbochka) | ![](tumbochka/preview.jpg) | [Скачать](tumbochka/rb_tumbochka.zip) | [Смотреть](tumbochka/) | [✅](https://3ddd.ru/3dmodels/show/om_tumbochka) |
 | Василий кожа (❌ нет на сайте) | ![](vasily-leather/preview.jpg) | [Скачать](vasily-leather/rb_vasily_leather.zip) | [Смотреть](vasily-leather/) | [✅](https://3ddd.ru/3dmodels/show/stul_vasilii_iz_kozhi) |
