@@ -9,8 +9,13 @@
 	<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <model-viewer src="./bench-1-table.glb" camera-target="0.0m 0.2m -0.0m" camera-orbit="-30deg 70deg 3.5m" field-of-view="20deg">
-      <div class="progress-bar hide" slot="progress-bar">
+    <model-viewer 
+		src="./bench-1-table.glb" 
+		camera-target="0.0m 0.2m -0.0m" 
+		camera-orbit="-30deg 70deg 3.5m" 
+		field-of-view="20deg"
+		poster="./poster.webp">
+      <div class="progress-bar" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
       <button slot="ar-button" id="ar-button">
@@ -24,7 +29,7 @@
       </div>
     </model-viewer>  
     <script src="../assets/js/script.js"></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 	<div class="annotation">Дополненная реальность работает только на смартфоне</div>
   </body>
 </html>

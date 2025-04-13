@@ -19,34 +19,32 @@ model-viewer {
   background-color: #ffffff;
 }
 
-
 .progress-bar {
-  display: block;
-  width: 33%;
-  height: 10%;
-  max-height: 2%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  border-radius: 25px;
-  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  background-color: rgba(0, 0, 0, 0.5);
+	display: block;
+	width: 33%;
+	height: 10%;
+	max-height: 2%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%, -50%, 0);
+	border-radius: 25px;
+	border: 1px solid rgba(255, 255, 255, 1.0);
+	background-color: rgba(0, 0, 0, 0.15);
 }
 
 .progress-bar.hide {
-  visibility: hidden;
-  transition: visibility 0.3s;
+	visibility: hidden;
+	transition: visibility 0.3s;
 }
 
 .update-bar {
-  background-color: rgba(255, 255, 255, 0.9);
-  width: 0%;
-  height: 100%;
-  border-radius: 25px;
-  float: left;
-  transition: width 0.3s;
+	background-color: rgba(255, 255, 255, 0.9);
+	width: 0%;
+	height: 100%;
+	border-radius: 25px;
+	float: left;
+	transition: width 0.3s;
 }
 
 #ar-button {
@@ -92,6 +90,11 @@ model-viewer {
   to   { transform: translateX(-100px); }
 }
 
+model-viewer {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
 model-viewer > #ar-prompt {
   position: absolute;
   left: 50%;
@@ -107,16 +110,35 @@ model-viewer[ar-status="session-started"] > #ar-prompt {
 model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
-.annotation{
-	background-color: #f5f9fa;
-	border-radius: 10px;
-	padding: 15px;
-	font-family: Roboto Regular, Helvetica Neue, sans-serif;
-	font-size: 14px;
-	margin-left: 30px;
-	margin-right: 30px;
-	text-align: center;
+
+.annotation {
+  background-color: #f5f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  position: fixed;
+  bottom: 20px; /* Отступ снизу */
+  left: 20px;   /* Отступ слева */
+  right: 20px;  /* Отступ справа */
+  z-index: 10;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 2s; /* Задержка анимации на 1 секунду */
+  max-width: calc(100% - 40px);  /* Учитываем отступы */
+  box-sizing: border-box;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .controls{
 	display: flex;
