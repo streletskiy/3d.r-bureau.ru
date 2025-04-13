@@ -147,6 +147,12 @@ model-viewer > #ar-prompt > img {
 	border-radius: 50%;
 }
 
+.mark.selected {
+	outline: 3px solid currentColor;
+	outline-offset: 2px;
+	color: inherit;
+}
+
 .container {
 	position: absolute;
 	width: 100%;
