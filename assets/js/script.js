@@ -31,19 +31,25 @@ function clearSelection() {
 	});
 }
 
-// Выделить первую кнопку по умолчанию
+// Выделить первую кнопку по умолчанию и установить цвет модели
 const firstMark = colorControls.querySelector('.mark');
 applySelectedStyle(firstMark);
 
+// Назначить стартовый цвет модели из первой кнопки
+const initialColor = firstMark.dataset.color;
+modelViewerColor.addEventListener('load', () => {
+	const [material] = modelViewerColor.model.materials;
+	material.pbrMetallicRoughness.setBaseColorFactor(initialColor);
+});
+
+// Обработчик кликов по цветам
 colorControls.addEventListener('click', (event) => {
 	const colorString = event.target.dataset.color;
 	if (!colorString) return;
 
-	// Установить цвет материала
 	const [material] = modelViewerColor.model.materials;
 	material.pbrMetallicRoughness.setBaseColorFactor(colorString);
 
-	// Обновить визуальное выделение
 	clearSelection();
 	if (event.target.classList.contains('mark')) {
 		applySelectedStyle(event.target);
@@ -51,3 +57,4 @@ colorControls.addEventListener('click', (event) => {
 		applySelectedStyle(event.target.querySelector('.mark'));
 	}
 });
+
