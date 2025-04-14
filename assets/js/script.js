@@ -71,7 +71,8 @@ fetch('../assets/cfg/cfg.json')
 
 			const initialColor = firstMark.dataset.color;
 			modelViewerColor.addEventListener('load', () => {
-				const [material] = modelViewerColor.model.materials;
+				const materialIndex = parseInt(modelViewerColor.dataset.materialIndex || '0', 10);
+				const material = modelViewerColor.model.materials[materialIndex];
 				material.pbrMetallicRoughness.setBaseColorFactor(initialColor);
 			});
 		}
@@ -81,7 +82,8 @@ fetch('../assets/cfg/cfg.json')
 			const colorString = event.target.dataset.color;
 			if (!colorString) return;
 
-			const [material] = modelViewerColor.model.materials;
+			const materialIndex = parseInt(modelViewerColor.dataset.materialIndex || '0', 10);
+			const material = modelViewerColor.model.materials[materialIndex];
 			material.pbrMetallicRoughness.setBaseColorFactor(colorString);
 
 			clearSelection();

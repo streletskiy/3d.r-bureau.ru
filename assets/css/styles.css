@@ -15,7 +15,7 @@ body {
 
 model-viewer {
   width: 100%;
-  height: 90%;
+  height: 100%;
   background-color: #ffffff;
 }
 
@@ -153,7 +153,7 @@ model-viewer > #ar-prompt > img {
 	width: 40px;
 	height: 40px;
 	padding: 0;
-	margin: 0 4px;
+	margin: 0 0;
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -183,7 +183,7 @@ model-viewer > #ar-prompt > img {
 .container {
 	position: absolute;
 	width: 100%;
-	bottom: 15px;
+	bottom: 75px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -193,7 +193,11 @@ model-viewer > #ar-prompt > img {
 }
 
 
-@media screen and (max-width : 906px){
- .annotation{
-  visibility:hidden;
+@media screen and (max-width : 906px) {
+ .annotation {
+	visibility:hidden;
   }
+ .container {
+	bottom: 15px;
+  }
+}
