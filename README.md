@@ -26,4 +26,4 @@
 | [Тумбочка](https://r-bureau.ru/tumbochka) | ![](tumbochka/preview.jpg) | [Скачать](tumbochka/rb_tumbochka.zip) | [Смотреть](tumbochka/) | [✅](https://3ddd.ru/3dmodels/show/om_tumbochka) |
 | [Василий ковёр](https://r-bureau.ru/kreslo-vasiliy) | ![](vasily-rug/preview.jpg) | [Скачать](vasily-rug/rb_vasily_rug.zip) | [Смотреть](vasily-rug/) | [✅](https://3ddd.ru/3dmodels/show/stul_vasilii_iz_kovra) |
 
-[Архив](archive.md)
+[Архив](archive/)
