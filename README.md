@@ -4,8 +4,6 @@
 
 | Название | Превью | Скачать 3D | Смотреть в 3D/AR | 3ddd |
 |:--------:|:------:|:----------:|:----------------:|:----:|
-| [Лавочка 1](https://r-bureau.ru/lavochka-1) | ![](bench-1/preview.jpg) | [Скачать](bench-1/rb_bench_1.zip) | [Смотреть](bench-1/) | [✅](https://3ddd.ru/3dmodels/show/om_lavka_1) |
-| [Лавочка 1 со столиком](https://r-bureau.ru/lavochka-so-stolikom-1) | ![](bench-1-table/preview.jpg) | [Скачать](bench-1-table/rb_bench_1_table.zip) | [Смотреть](bench-1-table/) | [✅](https://3ddd.ru/3dmodels/show/om_lavka_1_so_stolikom) |
 | [Лавочка 2](https://r-bureau.ru/lavochka-2) | ![](bench-2/preview.jpg) | [Скачать](bench-2/rb_bench_2.zip) | [Смотреть](bench-2/) | [✅](https://3ddd.ru/3dmodels/show/om_lavka_2) |
 | [Лавочка 2 со столиком](https://r-bureau.ru/lavochka-so-stolikom-2) | ![](bench-2-table/preview.jpg) | [Скачать](bench-2-table/rb_bench_2_table.zip) | [Смотреть](bench-2-table/) | [✅](https://3ddd.ru/3dmodels/show/om_lavka_2_so_stolikom) |
 | [Тележка](https://r-bureau.ru/telezhka) | ![](cart/preview.jpg) | [Скачать](cart/rb_cart.zip) | [Смотреть](cart/) | [✅](https://3ddd.ru/3dmodels/show/telezhka_2) |
@@ -26,5 +24,15 @@
 | [Прямоугольный столик подвесной](https://r-bureau.ru/stol-podvesnoy-kvadratnyy) | ![](table-coffee-susp-rect/preview.jpg) | [Скачать](table-coffee-susp-rect/rb_coffeetable_susp_rect.zip) | [Смотреть](table-coffee-susp-rect/) | ❌ |
 | [Стол на трёх ножках](https://r-bureau.ru/stol-na-trekh-nozhkakh) | ![](table-tripod/preview.jpg) | [Скачать](table-tripod/rb_table_tripod.zip) | [Смотреть](table-tripod/) | [✅](https://3ddd.ru/3dmodels/show/om_stol_na_trekh_nozhkakh) |
 | [Тумбочка](https://r-bureau.ru/tumbochka) | ![](tumbochka/preview.jpg) | [Скачать](tumbochka/rb_tumbochka.zip) | [Смотреть](tumbochka/) | [✅](https://3ddd.ru/3dmodels/show/om_tumbochka) |
-| Василий кожа (❌ нет на сайте) | ![](vasily-leather/preview.jpg) | [Скачать](vasily-leather/rb_vasily_leather.zip) | [Смотреть](vasily-leather/) | [✅](https://3ddd.ru/3dmodels/show/stul_vasilii_iz_kozhi) |
 | [Василий ковёр](https://r-bureau.ru/kreslo-vasiliy) | ![](vasily-rug/preview.jpg) | [Скачать](vasily-rug/rb_vasily_rug.zip) | [Смотреть](vasily-rug/) | [✅](https://3ddd.ru/3dmodels/show/stul_vasilii_iz_kovra) |
+
+<details>
+<summary>Архив</summary>
+
+| Название | Превью | Скачать 3D | Смотреть в 3D/AR | 3ddd |
+|:--------:|:------:|:----------:|:----------------:|:----:|
+| [Лавочка 1](https://r-bureau.ru/lavochka-1) | ![](bench-1/preview.jpg) | [Скачать](bench-1/rb_bench_1.zip) | [Смотреть](bench-1/) | [✅](https://3ddd.ru/3dmodels/show/om_lavka_1) |
+| [Лавочка 1 со столиком](https://r-bureau.ru/lavochka-so-stolikom-1) | ![](bench-1-table/preview.jpg) | [Скачать](bench-1-table/rb_bench_1_table.zip) | [Смотреть](bench-1-table/) | [✅](https://3ddd.ru/3dmodels/show/om_lavka_1_so_stolikom) |
+| Василий кожа (❌ нет на сайте) | ![](vasily-leather/preview.jpg) | [Скачать](vasily-leather/rb_vasily_leather.zip) | [Смотреть](vasily-leather/) | [✅](https://3ddd.ru/3dmodels/show/stul_vasilii_iz_kozhi) |
+
+</details>
