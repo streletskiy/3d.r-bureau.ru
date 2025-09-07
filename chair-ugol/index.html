@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Угол — 3D/AR</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Дуга M — 3D/AR">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="../assets/css/styles.css" rel="stylesheet"/>
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <model-viewer 
+		src="./chair-ugol.glb" 
+		camera-target="0.0m 0.3m 0.0m" 
+		camera-orbit="-30deg 70deg 2.65m" 
+		field-of-view="30deg"
+		poster="./poster.webp">
+      <div class="progress-bar" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          Смотреть в AR
+      </button>
+      <div id="ar-prompt">
+        <img src="../assets/img/ar_hand_prompt.png">
+      </div>
+      <div class="container">
+        <div class="controls" id="color-controls"></div>
+      </div>
+    </model-viewer>  
+    <script src="../assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<div class="annotation">Дополненная реальность работает только на смартфоне</div>
+  </body>
+</html>

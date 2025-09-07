@@ -15,6 +15,7 @@
 | [Элемент барный](https://r-bureau.ru/stul-barniy-element) | ![](element-bar/preview.jpg) | [Скачать](element-bar/rb_chair_element_bar.zip) | [Смотреть](element-bar/) | [✅](https://3ddd.ru/3dmodels/show/stul_element_barnyi) |
 | [Элемент с подлокотниками барный](https://r-bureau.ru/stul-barniy-s-podlokotnikami-element) | ![](element-bar-arm/preview.jpg) | [Скачать](element-bar-arm/rb_chair_element_bar_arm.zip) | [Смотреть](element-bar-arm/) | [✅](https://3ddd.ru/3dmodels/show/stul_element_barnyi_s_podlokotnikami) |
 | [Без названия](https://r-bureau.ru/no_name) | ![](chair-noname/preview.jpg) | [Скачать](chair-noname/rb_chair_noname.zip) | [Смотреть](chair-noname/) | ❌ |
+| [Угол](https://r-bureau.ru/ugol) | ![](chair-ugol/preview.jpg) | [Скачать](chair-ugol/rb_chair_ugol.zip) | [Смотреть](chair-ugol/) | ❌ |
 | [Стол "6"](https://r-bureau.ru/stol-6-stoleshnitsa-600-mm) | ![](table-6-600/preview.jpg) | [Скачать](table-11-600/rb_tables_6-11.zip) | [Смотреть](table-6-600/) | ❌ |
 | [Стол "11"](https://r-bureau.ru/stol-11-stoleshnitsa-600-mm) | ![](table-11-600/preview.jpg) | [Скачать](table-11-600/rb_tables_6-11.zip) | [Смотреть](table-11-600/) | ❌ |
 | [Журнальный столик](https://r-bureau.ru/stol-zhurnalnyy) | ![](table-coffee/preview.jpg) | [Скачать](table-coffee/rb_table_coffee.zip) | [Смотреть](table-coffee/) | [✅](https://3ddd.ru/3dmodels/show/om_zhurnalnyi_stolik) |
