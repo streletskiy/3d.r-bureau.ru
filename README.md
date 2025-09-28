@@ -6,7 +6,7 @@
 |:--------:|:------:|:----------:|:----------------:|:----:|
 | [Лавочка 2](https://r-bureau.ru/lavochka-2) | ![](bench-2/preview.jpg) | [Скачать](bench-2/rb_bench_2.zip) | [Смотреть](bench-2/) | [✅](https://3ddd.ru/3dmodels/show/om_lavka_2) |
 | [Лавочка 2 со столиком](https://r-bureau.ru/lavochka-so-stolikom-2) | ![](bench-2-table/preview.jpg) | [Скачать](bench-2-table/rb_bench_2_table.zip) | [Смотреть](bench-2-table/) | [✅](https://3ddd.ru/3dmodels/show/om_lavka_2_so_stolikom) |
-| [Лавочка без названия](https://r-bureau.ru/lavochka-no-name) | ![](bench-noname/preview.jpg) | [Скачать](bench-noname/rb_bench_noname.zip) | [Смотреть](bench-noname/) | ❌ |
+| [Лавочка без названия](https://r-bureau.ru/lavochka-no-name) | ![](bench-noname/preview.jpg) | [Скачать](bench-noname/rb_bench_noname.zip) | [Смотреть](bench-noname/) | [✅](https://3ddd.ru/3dmodels/show/om-lavochka-bez-nazvaniia) |
 | [Тележка](https://r-bureau.ru/telezhka) | ![](cart/preview.jpg) | [Скачать](cart/rb_cart.zip) | [Смотреть](cart/) | [✅](https://3ddd.ru/3dmodels/show/telezhka_2) |
 | [Дуга S](https://r-bureau.ru/stul-ulichnyy-duga-s) | ![](duga-s/preview.jpg) | [Скачать](duga-s/rb_chair_duga_S.zip) | [Смотреть](duga-s/) | [✅](https://3ddd.ru/3dmodels/show/stul_metallicheskii_duga_s) |
 | [Дуга M](https://r-bureau.ru/stul-ulichnyy-s-podlokotnikami-duga-m) | ![](duga-m/preview.jpg) | [Скачать](duga-m/rb_chair_duga_M.zip) | [Смотреть](duga-m/) | [✅](https://3ddd.ru/3dmodels/show/stul_s_podlokotnikami_duga_m) |
@@ -17,7 +17,7 @@
 | [Элемент с подлокотниками барный](https://r-bureau.ru/stul-barniy-s-podlokotnikami-element) | ![](element-bar-arm/preview.jpg) | [Скачать](element-bar-arm/rb_chair_element_bar_arm.zip) | [Смотреть](element-bar-arm/) | [✅](https://3ddd.ru/3dmodels/show/stul_element_barnyi_s_podlokotnikami) |
 | [Стул без названия](https://r-bureau.ru/no_name) | ![](chair-noname/preview.jpg) | [Скачать](chair-noname/rb_chair_noname.zip) | [Смотреть](chair-noname/) | [✅](https://3ddd.ru/3dmodels/show/om-stul-bez-nazvaniia) |
 | [Угол](https://r-bureau.ru/ugol) | ![](chair-ugol/preview.jpg) | [Скачать](chair-ugol/rb_chair_ugol.zip) | [Смотреть](chair-ugol/) | [✅](https://3ddd.ru/3dmodels/show/om-stul-ugol) |
-| [Стол "6" Круг](https://r-bureau.ru/stol-6) | ![](table-6-600/preview.jpg) | [Скачать](table-6-600/rb_table_6.zip) | [Смотреть](table-6-600/) | ❌ |
+| [Стол "6" Круг](https://r-bureau.ru/stol-6) | ![](table-6-600/preview.jpg) | [Скачать](table-6-600/rb_table_6.zip) | [Смотреть](table-6-600/) | [✅](https://3ddd.ru/3dmodels/show/om-stol-6-krug-1) |
 | [Стол "11" Круг](https://r-bureau.ru/stol-11) | ![](table-11-600/preview.jpg) | [Скачать](table-11-600/rb_tables_6-11.zip) | [Смотреть](table-11-600/) | ❌ |
 | [Журнальный столик](https://r-bureau.ru/stol-zhurnalnyy) | ![](table-coffee/preview.jpg) | [Скачать](table-coffee/rb_table_coffee.zip) | [Смотреть](table-coffee/) | [✅](https://3ddd.ru/3dmodels/show/om_zhurnalnyi_stolik) |
 | [Кофейный столик прямоугольный](https://r-bureau.ru/stol-kofeynyy	) | ![](table-coffee-rectangle/preview.jpg) | [Скачать](table-coffee-rectangle/rb_coffeetable_solid_rectangle.zip) | [Смотреть](table-coffee-rectangle/) | [✅](https://3ddd.ru/3dmodels/show/om-kofeinyi-stolik-priamougolnyi) |
