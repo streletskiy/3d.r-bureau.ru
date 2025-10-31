@@ -112,21 +112,34 @@ model-viewer > #ar-prompt > img {
 }
 
 .annotation {
-  background-color: #f5f9fa;
-  border-radius: 10px;
-  padding: 15px;
-  font-family: Roboto Regular, Helvetica Neue, sans-serif;
-  font-size: 14px;
-  text-align: center;
   position: fixed;
-  bottom: 20px; /* Отступ снизу */
-  left: 20px;   /* Отступ слева */
-  right: 20px;  /* Отступ справа */
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  min-height: 32px;
+  min-width: 220px;
+  max-width: clamp(280px, 45vw, 620px);
+  width: calc(100% - 40px);
+  gap: 16px;
+  font-family: Roboto Medium, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #2d2d2d;
+  text-align: center;
   opacity: 0;
   animation: fadeIn 2s forwards;
-  animation-delay: 2s; /* Задержка анимации на 1 секунду */
-  max-width: calc(100% - 40px);  /* Учитываем отступы */
+  animation-delay: 2s;
   box-sizing: border-box;
 }
 
