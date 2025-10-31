@@ -23,5 +23,9 @@
 		{ "file": "rb_plastic_black.jpg", "label": "Пластик - черно-белый" },
 		{ "file": "rb_plastic_white.jpg", "label": "Пластик - бело-черный" },
 		{ "file": "rb_plastic_colored.jpg", "label": "Пластик - цветной" }
-	]
+	],
+	"selectorLabels": {
+		"color": "Цвет",
+		"texture": "Текстура"
+	}
 }
