@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Элемент барный x Repanel — 3D/AR</title>
+    <meta charset="utf-8">
+    <meta name="description" content="ЭЭлемент барный x Repanel — 3D/AR">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="../assets/css/styles.css" rel="stylesheet"/>
+	<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <model-viewer 
+		src="./element-bar-plastic.glb" 
+		camera-target="0.0m 0.40m -0.0m" 
+		camera-orbit="-35deg 70deg 3.00m" 
+		field-of-view="30deg"
+		poster="./poster.webp">
+      <div class="progress-bar" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          Смотреть в AR
+      </button>
+      <div id="ar-prompt">
+        <img src="../assets/img/ar_hand_prompt.png">
+      </div>
+      <div class="container">
+        <div class="selector-group" data-label="Рама">
+          <div class="controls" id="color-controls" data-selector="color" data-options="colors" data-material-index="2"></div>
+        </div>
+        <div class="selector-group" data-label="Сидение и спинка">
+          <div class="controls" data-selector="texture" data-options="plastic" data-material-index="0"></div>
+        </div>
+      </div>
+    </model-viewer>  
+    <script src="../assets/js/script.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+	<div class="annotation">Дополненная реальность работает только на смартфоне</div>
+  </body>
+</html>
+
+
+

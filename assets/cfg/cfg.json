@@ -17,9 +17,9 @@
 		{ "color": "#798079", "label": "Агатовый серый" },
 		{ "color": "#b3b3b3", "label": "Белый" },
 		{ "color": "#f9a800", "label": "Сигнальный желтый" },
-		{ "color": "#de5307", "label": "Транспортный оранжевый" }
+		{ "color": "#e75200", "label": "Транспортный оранжевый" }
 	],
-	"textures": [
+	"plastic": [
 		{ "file": "rb_plastic_black.jpg", "label": "Пластик - черно-белый" },
 		{ "file": "rb_plastic_white.jpg", "label": "Пластик - бело-черный" },
 		{ "file": "rb_plastic_colored.jpg", "label": "Пластик - цветной" }
