@@ -147,6 +147,7 @@ model-viewer > #ar-prompt > img {
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+	gap: 8px;
 }
 
 .controls > button {
@@ -172,6 +173,9 @@ model-viewer > #ar-prompt > img {
 	border-radius: 50%;
 	box-sizing: border-box;
 	display: inline-block;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .mark.selected {
@@ -186,10 +190,11 @@ model-viewer > #ar-prompt > img {
 	bottom: 75px;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+	gap: 16px;
 }
 
 
