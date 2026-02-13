@@ -4,15 +4,15 @@
 
 | Название | Превью | Скачать 3D | Смотреть в 3D/AR | 3ddd |
 |:--------:|:------:|:----------:|:----------------:|:----:|
-| [Лавочка 2](https://r-bureau.ru/lavochka-2) | ![](bench-2/preview.jpg) | [Скачать](bench-2/rb_bench_2.zip) | [Смотреть](bench-2/) | [✅](https://3ddd.ru/3dmodels/show/om_lavka_2) |
-| [Лавочка 2 со столиком](https://r-bureau.ru/lavochka-so-stolikom-2) | ![](bench-2-table/preview.jpg) | [Скачать](bench-2-table/rb_bench_2_table.zip) | [Смотреть](bench-2-table/) | [✅](https://3ddd.ru/3dmodels/show/om_lavka_2_so_stolikom) |
+| [Лавочка 2](https://r-bureau.ru/lavochka) | ![](bench-2/preview.jpg) | [Скачать](bench-2/rb_bench_2.zip) | [Смотреть](bench-2/) | [✅](https://3ddd.ru/3dmodels/show/om_lavka_2) |
+| [Лавочка 2 со столиком](https://r-bureau.ru/lavochka-so-stolikom) | ![](bench-2-table/preview.jpg) | [Скачать](bench-2-table/rb_bench_2_table.zip) | [Смотреть](bench-2-table/) | [✅](https://3ddd.ru/3dmodels/show/om_lavka_2_so_stolikom) |
 | [Лавочка без названия](https://r-bureau.ru/lavochka-no-name) | ![](bench-noname/preview.jpg) | [Скачать](bench-noname/rb_bench_noname.zip) | [Смотреть](bench-noname/) | [✅](https://3ddd.ru/3dmodels/show/om-lavochka-bez-nazvaniia) |
 | [Тележка](https://r-bureau.ru/telezhka) | ![](cart/preview.jpg) | [Скачать](cart/rb_cart.zip) | [Смотреть](cart/) | [✅](https://3ddd.ru/3dmodels/show/telezhka_2) |
-| [Дуга S](https://r-bureau.ru/stul-ulichnyy-duga-s) | ![](duga-s/preview.jpg) | [Скачать](duga-s/rb_chair_duga_S.zip) | [Смотреть](duga-s/) | [✅](https://3ddd.ru/3dmodels/show/stul_metallicheskii_duga_s) |
-| [Дуга M](https://r-bureau.ru/stul-ulichnyy-s-podlokotnikami-duga-m) | ![](duga-m/preview.jpg) | [Скачать](duga-m/rb_chair_duga_M.zip) | [Смотреть](duga-m/) | [✅](https://3ddd.ru/3dmodels/show/stul_s_podlokotnikami_duga_m) |
-| [Дуга L](https://r-bureau.ru/stul-ulichnyy-barnyy-duga-l) | ![](duga-l/preview.jpg) | [Скачать](duga-l/rb_chair_duga_L.zip) | [Смотреть](duga-l/) | [✅](https://3ddd.ru/3dmodels/show/stul_barnyi_duga_l) |
-| [Элемент](https://r-bureau.ru/stul-ulichnyy-element) | ![](element/preview.jpg) | [Скачать](element/rb_chair_element.zip) | [Смотреть](element/) | [✅](https://3ddd.ru/3dmodels/show/om_stul_element) |
-| [Элемент с подлокотниками](https://r-bureau.ru/stul-ulichnyy-s-podlokotnikami-element) | ![](element-arm/preview.jpg) | [Скачать](element-arm/rb_chair_element_arm.zip) | [Смотреть](element-arm/) | [✅](https://3ddd.ru/3dmodels/show/stul_element_s_podlokotnikami) |
+| [Дуга S](https://r-bureau.ru/stul-duga-s) | ![](duga-s/preview.jpg) | [Скачать](duga-s/rb_chair_duga_S.zip) | [Смотреть](duga-s/) | [✅](https://3ddd.ru/3dmodels/show/stul_metallicheskii_duga_s) |
+| [Дуга M](https://r-bureau.ru/stul-duga-m) | ![](duga-m/preview.jpg) | [Скачать](duga-m/rb_chair_duga_M.zip) | [Смотреть](duga-m/) | [✅](https://3ddd.ru/3dmodels/show/stul_s_podlokotnikami_duga_m) |
+| [Дуга L](https://r-bureau.ru/stul-duga-l) | ![](duga-l/preview.jpg) | [Скачать](duga-l/rb_chair_duga_L.zip) | [Смотреть](duga-l/) | [✅](https://3ddd.ru/3dmodels/show/stul_barnyi_duga_l) |
+| [Элемент](https://r-bureau.ru/stul-element) | ![](element/preview.jpg) | [Скачать](element/rb_chair_element.zip) | [Смотреть](element/) | [✅](https://3ddd.ru/3dmodels/show/om_stul_element) |
+| [Элемент с подлокотниками](https://r-bureau.ru/stul-s-podlokotnikami-element) | ![](element-arm/preview.jpg) | [Скачать](element-arm/rb_chair_element_arm.zip) | [Смотреть](element-arm/) | [✅](https://3ddd.ru/3dmodels/show/stul_element_s_podlokotnikami) |
 | [Элемент барный](https://r-bureau.ru/stul-barniy-element) | ![](element-bar/preview.jpg) | [Скачать](element-bar/rb_chair_element_bar.zip) | [Смотреть](element-bar/) | [✅](https://3ddd.ru/3dmodels/show/stul_element_barnyi) |
 | [Элемент с подлокотниками барный](https://r-bureau.ru/stul-barniy-s-podlokotnikami-element) | ![](element-bar-arm/preview.jpg) | [Скачать](element-bar-arm/rb_chair_element_bar_arm.zip) | [Смотреть](element-bar-arm/) | [✅](https://3ddd.ru/3dmodels/show/stul_element_barnyi_s_podlokotnikami) |
 | [Элемент x Repanel](https://r-bureau.ru/element-repanel) | ![](element-plastic/preview.jpg) | [Скачать](element-plastic/rb_chair_element_plastic.zip) | [Смотреть](element-plastic/) | [✅](https://3ddd.ru/3dmodels/show/om-stul-element-repanel) |
