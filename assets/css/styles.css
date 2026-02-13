@@ -57,7 +57,7 @@ model-viewer {
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  bottom: 80px;
+  bottom: calc(80px + env(safe-area-inset-bottom, 0px));
   padding: 0px 16px 0px 40px;
   font-family: Roboto Regular, Helvetica Neue, sans-serif;
   font-size: 14px;
@@ -113,7 +113,7 @@ model-viewer > #ar-prompt > img {
 
 .annotation {
   position: fixed;
-  bottom: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -198,7 +198,7 @@ model-viewer > #ar-prompt > img {
 .container {
 	position: absolute;
 	width: 100%;
-	bottom: 75px;
+	bottom: calc(75px + env(safe-area-inset-bottom, 0px));
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -255,7 +255,7 @@ model-viewer > #ar-prompt > img {
 	transform: translate(-50%, 0);
   }
  .container {
-	bottom: 15px;
+	bottom: calc(15px + env(safe-area-inset-bottom, 0px));
 	flex-direction: column;
 	gap: 12px;
   }
@@ -276,5 +276,29 @@ model-viewer > #ar-prompt > img {
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 0px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  model-viewer {
+    animation: none;
+    opacity: 1;
+  }
+
+  model-viewer > #ar-prompt {
+    animation: none;
+  }
+
+  model-viewer > #ar-prompt > img {
+    animation: none;
+  }
+
+  .annotation {
+    animation: none;
+    opacity: 1;
+  }
+
+  .update-bar {
+    transition: none;
   }
 }

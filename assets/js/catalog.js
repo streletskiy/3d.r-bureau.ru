@@ -3,6 +3,14 @@
 
 (() => {
   const $ = (sel, root = document) => root.querySelector(sel);
+  const clampIndex = (i, len) => ((i % len) + len) % len;
+  const debounce = (fn, ms) => {
+    let t = null;
+    return (...args) => {
+      if (t) clearTimeout(t);
+      t = setTimeout(() => fn(...args), ms);
+    };
+  };
 
   const els = {
     cards: $("#cards"),
@@ -31,11 +39,12 @@
 
   const safeUrl = (url) => {
     const u = normalizeSpace(url);
-    // allow relative and http(s)
+    // allow relative and http(s); block other schemes (e.g. javascript:)
     if (!u) return "";
     if (u.startsWith("./") || u.startsWith("../") || u.startsWith("/")) return u;
     if (u.startsWith("http://") || u.startsWith("https://")) return u;
-    return u; // for simple relative like "bench-2/"
+    if (/^[a-zA-Z][a-zA-Z\d+\-.]*:/.test(u)) return "";
+    return u; // for simple relative like "bench-2/" or "r-bureau-3d-all.zip"
   };
 
   const mdLink = (cell) => {
@@ -143,13 +152,54 @@
     els.hint.textContent = text;
   };
 
+  const applyTabRoving = () => {
+    if (!els.chips) return;
+    const chips = Array.from(els.chips.querySelectorAll(".chip[data-category]"));
+    chips.forEach((btn) => {
+      const active = btn.dataset.category === state.category;
+      btn.setAttribute("tabindex", active ? "0" : "-1");
+      btn.setAttribute("aria-selected", active ? "true" : "false");
+    });
+  };
+
+  const readUrlState = () => {
+    try {
+      const u = new URL(window.location.href);
+      const q = normalizeSpace(u.searchParams.get("q") || "");
+      const cat = normalizeSpace(u.searchParams.get("cat") || "");
+      return { q, cat };
+    } catch {
+      return { q: "", cat: "" };
+    }
+  };
+
+  const writeUrlState = debounce(() => {
+    try {
+      const u = new URL(window.location.href);
+      const q = normalizeSpace(state.q);
+      const cat = normalizeSpace(state.category);
+
+      if (q) u.searchParams.set("q", q);
+      else u.searchParams.delete("q");
+
+      if (cat && cat !== "all") u.searchParams.set("cat", cat);
+      else u.searchParams.delete("cat");
+
+      window.history.replaceState({}, "", u.toString());
+    } catch {
+      // ignore
+    }
+  }, 120);
+
   const render = () => {
     const q = normalizeSpace(state.q).toLowerCase();
     const cat = state.category;
 
+    const total = state.items.length;
     let items = state.items.slice();
     if (cat !== "all") items = items.filter((it) => it.category === cat);
     if (q) items = items.filter((it) => it.search.includes(q));
+    const shown = items.length;
 
     els.cards.innerHTML = "";
     const frag = document.createDocumentFragment();
@@ -198,10 +248,15 @@
 
       const enableLink = (a, url) => {
         if (!a) return;
+        const href = safeUrl(url);
+        if (!href) {
+          disableLink(a);
+          return;
+        }
         a.classList.remove("is-disabled");
         a.removeAttribute("aria-disabled");
         a.removeAttribute("tabindex");
-        a.href = safeUrl(url);
+        a.href = href;
         a.title = "";
       };
 
@@ -225,8 +280,10 @@
 
     els.cards.appendChild(frag);
 
-    setHint(items.length ? `Показано: ${items.length}` : "Ничего не найдено");
-    setCount(state.items.length);
+    setHint(shown ? `Показано: ${shown} из ${total}` : "Ничего не найдено");
+    setCount(total);
+    applyTabRoving();
+    writeUrlState();
   };
 
   const setCategory = (cat) => {
@@ -236,6 +293,7 @@
         const active = btn.dataset.category === cat;
         btn.classList.toggle("is-active", active);
         btn.setAttribute("aria-selected", active ? "true" : "false");
+        btn.setAttribute("tabindex", active ? "0" : "-1");
       });
     }
     render();
@@ -247,15 +305,73 @@
         state.q = els.q.value || "";
         render();
       });
+
+      els.q.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          els.q.value = "";
+          state.q = "";
+          render();
+        }
+      });
     }
 
     if (els.chips) {
       els.chips.addEventListener("click", (e) => {
         const btn = e.target.closest(".chip[data-category]");
         if (!btn) return;
+        btn.focus();
         setCategory(btn.dataset.category || "all");
       });
+
+      // Keyboard navigation for role=tab UI: left/right to switch category.
+      els.chips.addEventListener("keydown", (e) => {
+        const btn = e.target.closest(".chip[data-category]");
+        if (!btn || !els.chips.contains(btn)) return;
+
+        const key = e.key;
+        const chips = Array.from(els.chips.querySelectorAll(".chip[data-category]"));
+        const i = chips.indexOf(btn);
+        if (i === -1 || !chips.length) return;
+
+        if (key === "Home") {
+          e.preventDefault();
+          chips[0].focus();
+          setCategory(chips[0].dataset.category || "all");
+          return;
+        }
+        if (key === "End") {
+          e.preventDefault();
+          const last = chips[chips.length - 1];
+          last.focus();
+          setCategory(last.dataset.category || "all");
+          return;
+        }
+
+        const isActivateKey = key === "Enter" || key === " ";
+        if (isActivateKey) {
+          e.preventDefault();
+          setCategory(btn.dataset.category || "all");
+          return;
+        }
+
+        const dir = key === "ArrowRight" ? 1 : key === "ArrowLeft" ? -1 : 0;
+        if (!dir) return;
+        e.preventDefault();
+
+        const next = chips[clampIndex(i + dir, chips.length)];
+        next.focus();
+        setCategory(next.dataset.category || "all");
+      });
     }
+
+    document.addEventListener("keydown", (e) => {
+      // Ctrl/Cmd+K focuses search.
+      if ((e.ctrlKey || e.metaKey) && (e.key === "k" || e.key === "K")) {
+        if (!els.q) return;
+        e.preventDefault();
+        els.q.focus();
+      }
+    });
   };
 
   const load = async () => {
@@ -293,6 +409,13 @@
   };
 
   initEvents();
-  setCategory("all");
+  const initial = readUrlState();
+  if (els.q && initial.q) {
+    els.q.value = initial.q;
+    state.q = initial.q;
+  }
+  // Apply category after chips are ready; validate against known categories.
+  const allowed = new Set(["all", "chairs", "tables", "benches", "storage", "other"]);
+  setCategory(allowed.has(initial.cat) ? initial.cat : "all");
   load();
 })();
