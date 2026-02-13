@@ -414,13 +414,63 @@ code {
 }
 
 @media (max-width: 640px) {
-  .top .wrap { padding: 12px 0; }
+  .top .wrap {
+    padding: 12px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .brand {
+    width: 100%;
+    gap: 8px;
+  }
+  .brand__logo { height: 16px; }
+  .brand__text {
+    font-size: 16px;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+  .top__actions {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 6px;
+  }
+  .top__actions .btn {
+    padding: 8px 10px;
+    font-size: 13px;
+    font-weight: 800;
+    background: #ffffff;
+    border-color: rgba(15, 23, 42, 0.92);
+    color: rgba(15, 23, 42, 0.96);
+    box-shadow: none;
+  }
+  .top__actions .btn:hover {
+    background: rgba(15, 23, 42, 0.96);
+    border-color: rgba(15, 23, 42, 0.92);
+    color: #ffffff;
+  }
   .btn { padding: 10px 12px; }
   .btn--small { padding: 8px 10px; }
 
-  .card { grid-template-columns: 140px 1fr; min-height: 140px; }
-  .card__thumb { width: 140px; max-width: 140px; }
+  /* Mobile cards: preview on top (square), details below, actions block at the bottom */
+  .card {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .card__thumb {
+    width: 100%;
+    max-width: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    padding: 12px;
+    aspect-ratio: 1 / 1;
+  }
   .card__body { padding: 14px 14px 14px; gap: 10px; }
   .card__title { font-size: 16px; }
   .card__descr { font-size: 13px; }
+  .card__actions {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    height: auto;
+  }
+  .card__actions .btn { white-space: nowrap; }
 }
