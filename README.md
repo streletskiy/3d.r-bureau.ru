@@ -1,6 +1,6 @@
 Коллекция 3d моделей от [r-bureau](https://r-bureau.ru/)
 
-[Скачать все модели](r-bureau-3d-all.zip)
+[Скачать все модели](https://github.com/streletskiy/3d.r-bureau.ru/releases/latest/download/r-bureau-3d-all.zip)
 
 | Название | Превью | Скачать 3D | Смотреть в 3D/AR | 3ddd |
 |:--------:|:------:|:----------:|:----------------:|:----:|
