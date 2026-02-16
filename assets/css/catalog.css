@@ -354,20 +354,45 @@ code {
   white-space: pre-line;
 }
 .card__descr:empty { display: none; }
+.card__formats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.card__formats:empty { display: none; }
+.format-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid #9ca3af;
+  background: #f3f4f6;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  padding: 7px 10px;
+  white-space: nowrap;
+}
+.format-pill.is-available {
+  border-color: #86efac;
+  background: #dcfce7;
+  color: #166534;
+}
+.format-pill.is-unavailable {
+  border-color: #d1d5db;
+  background: #f3f4f6;
+  color: #6b7280;
+}
 .card__actions {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 8px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
   align-items: center;
-  height: 43.33px;
   margin-top: auto; /* pin actions to the bottom of the card body */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge Legacy */
+  min-height: 43.33px;
 }
-.card__actions::-webkit-scrollbar { display: none; }
 
 .card__actions .btn {
   background: #ffffff;
@@ -469,8 +494,7 @@ code {
   .card__descr { font-size: 13px; }
   .card__actions {
     flex-wrap: wrap;
-    overflow-x: visible;
-    height: auto;
+    min-height: 0;
   }
   .card__actions .btn { white-space: nowrap; }
 }

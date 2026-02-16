@@ -31,6 +31,16 @@
     category: "all",
   };
 
+  const FORMAT_COLUMNS = [
+    { key: "max", label: ".max" },
+    { key: "fbx", label: ".fbx" },
+    { key: "3ds", label: ".3ds" },
+    { key: "obj", label: ".obj" },
+    { key: "dwg", label: ".dwg" },
+    { key: "rfa", label: ".rfa" },
+    { key: "skp", label: ".skp" },
+  ];
+
   const normalizeSpace = (s) =>
     String(s || "")
       .replace(/[\u0000-\u001f\u007f]+/g, " ")
@@ -59,6 +69,14 @@
     const m = s.match(/!\[[^\]]*\]\(([^)]+)\)/);
     if (!m) return null;
     return safeUrl(m[1]);
+  };
+
+  const isFormatAvailable = (cell) => {
+    const s = normalizeSpace(cell).toLowerCase();
+    if (!s) return false;
+    if (/[✅✔☑]/.test(s)) return true;
+    if (/[❌✖✘]/.test(s)) return false;
+    return /^(да|yes|true|1)$/i.test(s);
   };
 
   const categoryFromSlug = (slug) => {
@@ -101,6 +119,10 @@
       const download = mdLink(cells[2]);
       const view = mdLink(cells[3]);
       const ddd = mdLink(cells[4] || "");
+      const formats = {};
+      FORMAT_COLUMNS.forEach((format, idx) => {
+        formats[format.key] = isFormatAvailable(cells[5 + idx] || "");
+      });
 
       if (!name || !view) continue;
 
@@ -115,6 +137,7 @@
         slug,
         category: categoryFromSlug(slug),
         search: normalizeSpace(name.text).toLowerCase(),
+        formats,
       };
       items.push(item);
     }
@@ -210,6 +233,7 @@
       const viewA = node.querySelector('[data-role="view"]');
       const viewTitle = node.querySelector('[data-role="viewTitle"]');
       const descr = node.querySelector('[data-role="descr"]');
+      const formats = node.querySelector('[data-role="formats"]');
       const viewBtn = node.querySelector('[data-role="viewBtn"]');
       const downloadBtn = node.querySelector('[data-role="downloadBtn"]');
       const externalBtn = node.querySelector('[data-role="externalBtn"]');
@@ -233,6 +257,17 @@
           descr.textContent = lines.trim();
         } else {
           descr.textContent = "";
+        }
+      }
+
+      if (formats) {
+        formats.innerHTML = "";
+        for (const format of FORMAT_COLUMNS) {
+          const badge = document.createElement("span");
+          const available = Boolean(it.formats && it.formats[format.key]);
+          badge.className = `format-pill ${available ? "is-available" : "is-unavailable"}`;
+          badge.textContent = format.label;
+          formats.appendChild(badge);
         }
       }
 
