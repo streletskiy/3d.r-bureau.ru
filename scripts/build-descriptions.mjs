@@ -52,7 +52,9 @@ const parseReadmeItems = (md) => {
   const items = [];
   for (const row of rows) {
     const rawCells = row.split("|").map((c) => c.trim());
-    const cells = rawCells.filter((c, idx) => !(c === "" && (idx === 0 || idx === rawCells.length - 1)));
+    const cells = rawCells.filter(
+      (c, idx) => !(c === "" && (idx === 0 || idx === rawCells.length - 1)),
+    );
     if (cells.length < 4) continue;
 
     const name = mdLink(cells[0]);
@@ -94,11 +96,15 @@ const extractDescrHtml = (pageHtml) => {
   const html = String(pageHtml || "");
 
   // Primary: <div ... field="descr">...</div>
-  const m1 = html.match(/<div[^>]*\bfield=["']descr["'][^>]*>([\s\S]*?)<\/div>/i);
+  const m1 = html.match(
+    /<div[^>]*\bfield=["']descr["'][^>]*>([\s\S]*?)<\/div>/i,
+  );
   if (m1) return m1[1];
 
   // Fallback variants (in case templates differ)
-  const m2 = html.match(/<[^>]*\bfield=["']descr["'][^>]*>([\s\S]*?)<\/[^>]+>/i);
+  const m2 = html.match(
+    /<[^>]*\bfield=["']descr["'][^>]*>([\s\S]*?)<\/[^>]+>/i,
+  );
   if (m2) return m2[1];
 
   return "";
@@ -195,11 +201,12 @@ const main = async () => {
   await fs.mkdir(path.dirname(outPath), { recursive: true });
   await fs.writeFile(outPath, JSON.stringify(result, null, 2) + "\n", "utf8");
 
-  process.stdout.write(`\nWrote ${outPath}\nOK: ${okCount}, Failed: ${failCount}\n`);
+  process.stdout.write(
+    `\nWrote ${outPath}\nOK: ${okCount}, Failed: ${failCount}\n`,
+  );
 };
 
 main().catch((err) => {
   console.error(err);
   process.exitCode = 1;
 });
-

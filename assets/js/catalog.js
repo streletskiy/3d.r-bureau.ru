@@ -51,7 +51,8 @@
     const u = normalizeSpace(url);
     // allow relative and http(s); block other schemes (e.g. javascript:)
     if (!u) return "";
-    if (u.startsWith("./") || u.startsWith("../") || u.startsWith("/")) return u;
+    if (u.startsWith("./") || u.startsWith("../") || u.startsWith("/"))
+      return u;
     if (u.startsWith("http://") || u.startsWith("https://")) return u;
     if (/^[a-zA-Z][a-zA-Z\d+\-.]*:/.test(u)) return "";
     return u; // for simple relative like "bench-2/" or "r-bureau-3d-all.zip"
@@ -82,7 +83,13 @@
   const categoryFromSlug = (slug) => {
     const s = String(slug || "").toLowerCase();
     if (s.startsWith("bench-")) return "benches";
-    if (s.startsWith("chair-") || s.startsWith("duga-") || s.startsWith("element") || s.startsWith("vasily-")) return "chairs";
+    if (
+      s.startsWith("chair-") ||
+      s.startsWith("duga-") ||
+      s.startsWith("element") ||
+      s.startsWith("vasily-")
+    )
+      return "chairs";
     if (s.startsWith("table-")) return "tables";
     if (s === "tumbochka") return "storage";
     if (s === "cart") return "other";
@@ -111,7 +118,9 @@
     for (const row of rows) {
       const rawCells = row.split("|").map((c) => c.trim());
       // remove first/last empty caused by leading/trailing pipes
-      const cells = rawCells.filter((c, idx) => !(c === "" && (idx === 0 || idx === rawCells.length - 1)));
+      const cells = rawCells.filter(
+        (c, idx) => !(c === "" && (idx === 0 || idx === rawCells.length - 1)),
+      );
       if (cells.length < 4) continue;
 
       const name = mdLink(cells[0]);
@@ -146,7 +155,11 @@
 
   const formatDate = (d) => {
     try {
-      return new Intl.DateTimeFormat("ru-RU", { year: "numeric", month: "long", day: "2-digit" }).format(d);
+      return new Intl.DateTimeFormat("ru-RU", {
+        year: "numeric",
+        month: "long",
+        day: "2-digit",
+      }).format(d);
     } catch {
       return d.toISOString().slice(0, 10);
     }
@@ -177,7 +190,9 @@
 
   const applyTabRoving = () => {
     if (!els.chips) return;
-    const chips = Array.from(els.chips.querySelectorAll(".chip[data-category]"));
+    const chips = Array.from(
+      els.chips.querySelectorAll(".chip[data-category]"),
+    );
     chips.forEach((btn) => {
       const active = btn.dataset.category === state.category;
       btn.setAttribute("tabindex", active ? "0" : "-1");
@@ -246,7 +261,10 @@
 
       const viewUrl = safeUrl(it.viewUrl);
       if (viewA) viewA.href = viewUrl || "#";
-      if (viewTitle) { viewTitle.href = viewUrl || "#"; viewTitle.textContent = it.title; }
+      if (viewTitle) {
+        viewTitle.href = viewUrl || "#";
+        viewTitle.textContent = it.title;
+      }
       if (viewBtn) viewBtn.href = viewUrl || "#";
 
       if (descr) {
@@ -364,7 +382,9 @@
         if (!btn || !els.chips.contains(btn)) return;
 
         const key = e.key;
-        const chips = Array.from(els.chips.querySelectorAll(".chip[data-category]"));
+        const chips = Array.from(
+          els.chips.querySelectorAll(".chip[data-category]"),
+        );
         const i = chips.indexOf(btn);
         if (i === -1 || !chips.length) return;
 
@@ -423,7 +443,9 @@
 
       // Optional: descriptions generated offline (see scripts/build-descriptions.mjs).
       try {
-        const dres = await fetch("assets/data/descriptions.json", { cache: "no-store" });
+        const dres = await fetch("assets/data/descriptions.json", {
+          cache: "no-store",
+        });
         if (dres.ok) {
           const data = await dres.json();
           const bySlug = data?.items || data?.bySlug || data || {};
@@ -450,7 +472,14 @@
     state.q = initial.q;
   }
   // Apply category after chips are ready; validate against known categories.
-  const allowed = new Set(["all", "chairs", "tables", "benches", "storage", "other"]);
+  const allowed = new Set([
+    "all",
+    "chairs",
+    "tables",
+    "benches",
+    "storage",
+    "other",
+  ]);
   setCategory(allowed.has(initial.cat) ? initial.cat : "all");
   load();
 })();

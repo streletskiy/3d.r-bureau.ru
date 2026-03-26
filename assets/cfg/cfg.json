@@ -1,31 +1,31 @@
 {
-	"modelViewerAttributes": {
-		"ar": true,
-		"ar-modes": "webxr scene-viewer quick-look",
-		"camera-controls": true,
-		"shadow-intensity": "0.5",
-		"exposure": "1",
-		"shadow-softness": "1",
-		"tone-mapping": "neutral",
-		"environment-image": "legacy"
-	},
-	"colors": [
-		{ "color": "#005387", "label": "Сигнальный синий" },
-		{ "color": "#212122", "label": "Глубокий черный" },
-		{ "color": "#4d5741", "label": "Оливково-зеленый" },
-		{ "color": "#662625", "label": "Коричнево-красный" },
-		{ "color": "#798079", "label": "Агатовый серый" },
-		{ "color": "#b3b3b3", "label": "Белый" },
-		{ "color": "#f9a800", "label": "Сигнальный желтый" },
-		{ "color": "#e75200", "label": "Транспортный оранжевый" }
-	],
-	"plastic": [
-		{ "file": "rb_plastic_black.jpg", "label": "Пластик - черно-белый" },
-		{ "file": "rb_plastic_white.jpg", "label": "Пластик - бело-черный" },
-		{ "file": "rb_plastic_colored.jpg", "label": "Пластик - цветной" }
-	],
-	"selectorLabels": {
-		"color": "Цвет",
-		"texture": "Текстура"
-	}
+  "modelViewerAttributes": {
+    "ar": true,
+    "ar-modes": "webxr scene-viewer quick-look",
+    "camera-controls": true,
+    "shadow-intensity": "0.5",
+    "exposure": "1",
+    "shadow-softness": "1",
+    "tone-mapping": "neutral",
+    "environment-image": "legacy"
+  },
+  "colors": [
+    { "color": "#005387", "label": "Сигнальный синий" },
+    { "color": "#212122", "label": "Глубокий черный" },
+    { "color": "#4d5741", "label": "Оливково-зеленый" },
+    { "color": "#662625", "label": "Коричнево-красный" },
+    { "color": "#798079", "label": "Агатовый серый" },
+    { "color": "#b3b3b3", "label": "Белый" },
+    { "color": "#f9a800", "label": "Сигнальный желтый" },
+    { "color": "#e75200", "label": "Транспортный оранжевый" }
+  ],
+  "plastic": [
+    { "file": "rb_plastic_black.jpg", "label": "Пластик - черно-белый" },
+    { "file": "rb_plastic_white.jpg", "label": "Пластик - бело-черный" },
+    { "file": "rb_plastic_colored.jpg", "label": "Пластик - цветной" }
+  ],
+  "selectorLabels": {
+    "color": "Цвет",
+    "texture": "Текстура"
+  }
 }

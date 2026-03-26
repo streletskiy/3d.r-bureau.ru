@@ -31,7 +31,8 @@ const extractTitle = (html) => {
 
 const setMetaDescriptionToTitle = (html, title) => {
   if (!title) return html;
-  const re = /(<meta\s+name=["']description["']\s+content=["'])([^"']*)(["'][^>]*>)/i;
+  const re =
+    /(<meta\s+name=["']description["']\s+content=["'])([^"']*)(["'][^>]*>)/i;
   if (!re.test(html)) return html;
   return html.replace(re, `$1${title}$3`);
 };
@@ -70,14 +71,27 @@ const normalizeViewerFooter = (html, eol) => {
   const bodyTagEnd = bodyTagStart + "</body>".length;
   const tailAfterBody = html.slice(bodyTagEnd);
 
-  const annMatch = between.match(/<div\s+class=["']annotation["'][^>]*>([\s\S]*?)<\/div>/i);
-  const annInner = annMatch ? annMatch[1].trim() : "Дополненная реальность работает только на смартфоне";
+  const annMatch = between.match(
+    /<div\s+class=["']annotation["'][^>]*>([\s\S]*?)<\/div>/i,
+  );
+  const annInner = annMatch
+    ? annMatch[1].trim()
+    : "Дополненная реальность работает только на смартфоне";
 
   // Remove our known blocks from the "between" section.
   let cleaned = between;
-  cleaned = cleaned.replace(/<script[^>]*src=["']\.\.\/assets\/js\/script\.js["'][^>]*>\s*<\/script>\s*/gi, "");
-  cleaned = cleaned.replace(/<script[^>]*src=["']https:\/\/unpkg\.com\/@google\/model-viewer\/dist\/model-viewer\.min\.js["'][^>]*>\s*<\/script>\s*/gi, "");
-  cleaned = cleaned.replace(/<div\s+class=["']annotation["'][^>]*>[\s\S]*?<\/div>\s*/gi, "");
+  cleaned = cleaned.replace(
+    /<script[^>]*src=["']\.\.\/assets\/js\/script\.js["'][^>]*>\s*<\/script>\s*/gi,
+    "",
+  );
+  cleaned = cleaned.replace(
+    /<script[^>]*src=["']https:\/\/unpkg\.com\/@google\/model-viewer\/dist\/model-viewer\.min\.js["'][^>]*>\s*<\/script>\s*/gi,
+    "",
+  );
+  cleaned = cleaned.replace(
+    /<div\s+class=["']annotation["'][^>]*>[\s\S]*?<\/div>\s*/gi,
+    "",
+  );
 
   // Keep any remaining content (should be empty on our pages).
   const rest = cleaned.trim();
@@ -97,7 +111,11 @@ const normalizeViewerFooter = (html, eol) => {
 
 const main = async () => {
   const files = await walk(ROOT);
-  const targets = files.filter((p) => path.basename(p).toLowerCase() === "index.html" && path.resolve(p) !== path.resolve(path.join(ROOT, "index.html")));
+  const targets = files.filter(
+    (p) =>
+      path.basename(p).toLowerCase() === "index.html" &&
+      path.resolve(p) !== path.resolve(path.join(ROOT, "index.html")),
+  );
 
   let touched = 0;
   for (const file of targets) {
