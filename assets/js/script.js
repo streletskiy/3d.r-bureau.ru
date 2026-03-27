@@ -19,6 +19,96 @@ if (!modelViewer) {
 
 modelViewer.addEventListener("progress", onProgress);
 
+// Console helpers for capturing the current camera framing after manual tweaks.
+const roundCameraNumber = (value, digits = 3) => {
+  const normalized = Math.abs(value) < 1e-6 ? 0 : value;
+  return normalized.toFixed(digits).replace(/\.?0+$/, "");
+};
+
+const getCameraSnapshot = () => {
+  const orbit =
+    typeof modelViewer.getCameraOrbit === "function"
+      ? modelViewer.getCameraOrbit()
+      : null;
+  const target =
+    typeof modelViewer.getCameraTarget === "function"
+      ? modelViewer.getCameraTarget()
+      : null;
+  const fieldOfView =
+    typeof modelViewer.getFieldOfView === "function"
+      ? modelViewer.getFieldOfView()
+      : null;
+
+  const orbitTheta = orbit
+    ? `${roundCameraNumber((orbit.theta * 180) / Math.PI, 2)}deg`
+    : "auto";
+  const orbitPhi = orbit
+    ? `${roundCameraNumber((orbit.phi * 180) / Math.PI, 2)}deg`
+    : "auto";
+  const orbitRadius = orbit ? `${roundCameraNumber(orbit.radius, 3)}m` : "auto";
+
+  const targetX = target ? `${roundCameraNumber(target.x, 3)}m` : "auto";
+  const targetY = target ? `${roundCameraNumber(target.y, 3)}m` : "auto";
+  const targetZ = target ? `${roundCameraNumber(target.z, 3)}m` : "auto";
+
+  const fieldOfViewText =
+    typeof fieldOfView === "number"
+      ? `${roundCameraNumber(fieldOfView, 2)}deg`
+      : String(modelViewer.fieldOfView || "auto");
+
+  return {
+    target: `${targetX} ${targetY} ${targetZ}`,
+    orbit: `${orbitTheta} ${orbitPhi} ${orbitRadius}`,
+    fieldOfView: fieldOfViewText,
+    raw: { orbit, target, fieldOfView },
+  };
+};
+
+const buildCameraSnippet = (snapshot) =>
+  [
+    `camera-target="${snapshot.target}"`,
+    `camera-orbit="${snapshot.orbit}"`,
+    `field-of-view="${snapshot.fieldOfView}"`,
+  ].join("\n");
+
+const showCamera = () => {
+  const snapshot = getCameraSnapshot();
+  const snippet = buildCameraSnippet(snapshot);
+
+  console.table({
+    "camera-target": snapshot.target,
+    "camera-orbit": snapshot.orbit,
+    "field-of-view": snapshot.fieldOfView,
+  });
+  console.log(snippet);
+
+  return snippet;
+};
+
+const copyCamera = async () => {
+  const snippet = showCamera();
+
+  if (navigator.clipboard?.writeText) {
+    try {
+      await navigator.clipboard.writeText(snippet);
+      console.info("Camera settings copied to clipboard.");
+    } catch (error) {
+      console.warn("Could not copy camera settings to clipboard.", error);
+    }
+  }
+
+  return snippet;
+};
+
+window.cameraDebug = {
+  snapshot: getCameraSnapshot,
+  show: showCamera,
+  copy: copyCamera,
+};
+window.showCamera = showCamera;
+window.copyCamera = copyCamera;
+window.getCameraValues = getCameraSnapshot;
+
 const isColorPickerEnabled = modelViewer.dataset.colorPicker !== "off";
 const selectorBlocks = Array.from(
   document.querySelectorAll(".controls[data-selector]"),
